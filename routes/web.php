@@ -19,6 +19,11 @@ Route::get('/', function () {
 
 });
 
-Route::get('/variantes',[VariantesCovidController::class,'index']);
+Route::get('/variantes',[VariantesCovidController::class,'index'])-> name('variantes.index');
+Route::get('/variantes/create',[VariantesCovidController::class,'create'])-> name('variantes.create');
+Route::get('/variantes/store',[VariantesCovidController::class,'store'])-> name('variantes.store');
+Route::get('/variantes/{id}/edit',[VariantesCovidController::class,'edit'])->name('variantes.edit');
+
+
 
 
